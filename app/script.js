@@ -5,6 +5,7 @@ const resultadoElemento = document.getElementById("resultado");
 
 agregarBoton.addEventListener("click", () => {
     const newInputContainer = inputContainer.cloneNode(true);
+    resetInputValues(newInputContainer);
     inputContainer.parentNode.insertBefore(newInputContainer, agregarBoton);
 });
 
@@ -31,3 +32,10 @@ calcularBoton.addEventListener("click", () => {
     const segundosResultado = totalSegundos % 60;
     resultadoElemento.textContent = `${horasResultado} horas : ${minutosResultado} minutos : ${segundosResultado} segundos`;
 });
+
+function resetInputValues(inputContainer) {
+    const inputs = inputContainer.querySelectorAll("input");
+    for (const input of inputs) {
+        input.value = "";
+    }
+}
