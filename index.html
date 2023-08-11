@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tiempo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="calculadora">
+        <h2>Calculadora de tiempo</h2>
+        <div class="input-container" id="input-container">
+            <input type="number" class="horas" placeholder="Horas">
+            <span>:</span>
+            <input type="number" class="minutos" placeholder="Minutos">
+            <span>:</span>
+            <input type="number" class="segundos" placeholder="Segundos">
+            <select class="operador">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+        </div>
+        <button id="agregar">Agregar Horario</button>
+        <button id="calcular">Calcular</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="./app/script.js"></script>
+</body>
+</html> 
